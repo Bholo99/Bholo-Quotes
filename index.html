@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BHOLO | Elite Luxury Quotes</title>
+<meta name="description" content="Enter the Bholosphere. Elite motivation, wisdom, discipline and personal growth.">
+
+<!-- CUSTOM BHOLO FAVICON -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23060606'/%3E%3Cpath d='M50 8 L62 36 L91 23 L74 50 L96 64 L64 67 L50 94 L36 67 L4 64 L26 50 L9 23 L38 36Z' fill='%23d6b46a'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-size='40' font-family='serif' font-weight='bold' fill='%23060606'%3EB%3C/text%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--gold:#d6b46a;
+--gold2:#f5dfa4;
+--black:#070707;
+--panel:#11100e;
+--white:#f8f4e9;
+--muted:#aaa49a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+background:var(--black);
+color:var(--white);
+font-family:Montserrat,Arial,sans-serif;
+overflow-x:hidden;
+}
+
+/* LUXURY BACKGROUND */
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+radial-gradient(ellipse at 15% 15%,rgba(166,119,39,.20),transparent 35%),
+radial-gradient(ellipse at 85% 45%,rgba(180,135,58,.13),transparent 38%),
+radial-gradient(ellipse at 50% 100%,rgba(104,72,24,.18),transparent 40%),
+linear-gradient(125deg,#050505,#15120b 48%,#050505);
+}
+
+body:after{
+content:"";
+position:fixed;
+inset:0;
+z-index:-1;
+pointer-events:none;
+opacity:.16;
+background-image:
+url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+a{text-decoration:none;color:inherit}
+
+.gold{color:var(--gold)}
+
+.container{
+width:min(1150px,90%);
+margin:auto;
+}
+
+/* NAVIGATION */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+background:rgba(5,5,5,.91);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(214,180,106,.25);
+}
+
+.nav{
+height:85px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:min(1150px,90%);
+margin:auto;
+}
+
+.logo{
+font-family:"Cormorant Garamond",serif;
+font-size:32px;
+font-weight:700;
+letter-spacing:5px;
+color:var(--gold2);
+}
+
+.logo small{
+display:block;
+font-family:Montserrat,sans-serif;
+font-size:8px;
+letter-spacing:6px;
+text-align:center;
+color:#aaa;
+}
+
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+font-size:10px;
+letter-spacing:2px;
+color:#ddd;
+transition:.3s;
+}
+
+nav a:hover{color:var(--gold)}
+
+.nav-btn{
+border:1px solid var(--gold);
+padding:13px 18px;
+color:var(--gold);
+}
+
+.menu{
+display:none;
+background:none;
+border:0;
+color:var(--gold);
+font-size:27px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+padding:140px 20px 80px;
+}
+
+.hero:before{
+content:"B";
+position:absolute;
+font-family:"Cormorant Garamond",serif;
+font-size:600px;
+font-weight:700;
+color:rgba(214,180,106,.025);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+}
+
+.hero-label{
+color:var(--gold);
+font-size:10px;
+letter-spacing:7px;
+margin-bottom:30px;
+}
+
+.hero h1{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(65px,11vw,125px);
+line-height:.9;
+letter-spacing:3px;
+color:var(--gold2);
+text-shadow:0 0 45px rgba(214,180,106,.18);
+}
+
+.hero h1 span{
+display:block;
+color:white;
+font-size:.55em;
+letter-spacing:12px;
+margin-top:20px;
+}
+
+.hero-description{
+max-width:620px;
+margin:35px auto;
+font-size:13px;
+line-height:2.2;
+color:#c1b9aa;
+font-weight:300;
+}
+
+.button{
+display:inline-block;
+padding:17px 32px;
+background:linear-gradient(120deg,#b58b40,#f4d998,#b58b40);
+color:#090909;
+font-size:10px;
+font-weight:700;
+letter-spacing:2px;
+transition:.3s;
+border:0;
+cursor:pointer;
+}
+
+.button:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 35px rgba(214,180,106,.25);
+}
+
+.outline{
+background:transparent;
+border:1px solid var(--gold);
+color:var(--gold);
+margin-left:12px;
+}
+
+.hero-bottom{
+margin-top:90px;
+font-size:9px;
+letter-spacing:5px;
+color:#9d8961;
+}
+
+/* SECTIONS */
+
+section{padding:110px 0}
+
+.section-heading{
+text-align:center;
+margin-bottom:55px;
+}
+
+.section-heading small{
+font-size:10px;
+letter-spacing:5px;
+color:var(--gold);
+}
+
+.section-heading h2{
+font-family:"Cormorant Garamond",serif;
+font-size:55px;
+font-weight:500;
+margin-top:15px;
+}
+
+.section-heading p{
+color:var(--muted);
+font-size:12px;
+margin-top:15px;
+line-height:2;
+}
+
+/* GOLD DIVIDER */
+
+.divider{
+width:70px;
+height:2px;
+background:var(--gold);
+margin:25px auto;
+}
+
+/* QUOTES */
+
+.quote-area{
+background:linear-gradient(130deg,rgba(30,25,16,.9),rgba(7,7,7,.95));
+border:1px solid rgba(214,180,106,.4);
+padding:65px 35px;
+text-align:center;
+max-width:850px;
+margin:auto;
+box-shadow:0 20px 80px rgba(0,0,0,.4);
+}
+
+.quote-symbol{
+font-family:Georgia,serif;
+font-size:90px;
+color:var(--gold);
+line-height:.8;
+}
+
+#quote{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(27px,4vw,43px);
+line-height:1.4;
+margin:25px auto;
+max-width:700px;
+}
+
+.quote-author{
+font-size:9px;
+letter-spacing:4px;
+color:var(--gold);
+margin-bottom:30px;
+}
+
+.quote-actions{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+/* PHILOSOPHY */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+}
+
+.card{
+padding:40px 27px;
+background:linear-gradient(145deg,#17140d,#0b0b0a);
+border:1px solid rgba(214,180,106,.2);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.card-number{
+color:var(--gold);
+font-size:11px;
+letter-spacing:3px;
+}
+
+.card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:32px;
+color:var(--gold2);
+margin:25px 0 15px;
+}
+
+.card p{
+font-size:12px;
+line-height:2;
+color:#aaa;
+}
+
+/* PRIVATE SESSIONS */
+
+.sessions{
+background:
+radial-gradient(ellipse at 80% 50%,rgba(184,139,57,.13),transparent 45%),
+#100e09;
+border-top:1px solid rgba(214,180,106,.25);
+border-bottom:1px solid rgba(214,180,106,.25);
+}
+
+.session-box{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+.session-box p{
+color:#bbb;
+font-size:13px;
+line-height:2.2;
+margin:25px auto;
+}
+
+/* CHATBOT */
+
+.chat-container{
+max-width:750px;
+margin:auto;
+background:#100f0c;
+border:1px solid rgba(214,180,106,.4);
+box-shadow:0 20px 80px rgba(0,0,0,.5);
+}
+
+.chat-header{
+background:linear-gradient(100deg,#211a0d,#0c0c0b);
+padding:24px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.chat-header h3{
+font-family:"Cormorant Garamond",serif;
+font-size:25px;
+color:var(--gold2);
+}
+
+.status{
+font-size:9px;
+letter-spacing:2px;
+color:#8eb77d;
+margin-top:5px;
+}
+
+.chat-window{
+height:350px;
+overflow-y:auto;
+padding:25px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.message{
+max-width:85%;
+padding:15px;
+font-size:12px;
+line-height:1.8;
+border-radius:3px;
+}
+
+.bot{
+align-self:flex-start;
+background:#211d14;
+border-left:2px solid var(--gold);
+}
+
+.user{
+align-self:flex-end;
+background:#d6b46a;
+color:#080808;
+}
+
+.chat-input{
+display:flex;
+border-top:1px solid rgba(214,180,106,.2);
+}
+
+.chat-input input{
+flex:1;
+min-width:0;
+padding:20px;
+background:#090909;
+border:0;
+outline:none;
+color:white;
+font-family:Montserrat,sans-serif;
+font-size:12px;
+}
+
+.chat-input button{
+background:var(--gold);
+border:0;
+padding:0 25px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.suggestions{
+padding:15px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.suggestions button{
+background:transparent;
+border:1px solid rgba(214,180,106,.35);
+color:var(--gold);
+padding:9px 12px;
+font-size:10px;
+cursor:pointer;
+}
+
+/* INSTAGRAM */
+
+.social-box{
+text-align:center;
+border:1px solid rgba(214,180,106,.3);
+padding:65px 20px;
+background:linear-gradient(130deg,#18140c,#080808);
+}
+
+.social-box p{
+color:#aaa;
+font-size:12px;
+margin:20px 0;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px 20px;
+background:#050505;
+border-top:1px solid rgba(214,180,106,.3);
+text-align:center;
+}
+
+.footer-logo{
+font-family:"Cormorant Garamond",serif;
+font-size:35px;
+letter-spacing:5px;
+color:var(--gold);
+}
+
+footer p{
+color:#777;
+font-size:9px;
+letter-spacing:2px;
+margin-top:15px;
+line-height:2;
+}
+
+@media(max-width:750px){
+.menu{display:block}
+nav{
+display:none;
+position:absolute;
+top:85px;
+left:0;
+width:100%;
+background:#090909;
+padding:30px;
+flex-direction:column;
+}
+nav.open{display:flex}
+.hero h1{font-size:65px}
+.hero h1 span{letter-spacing:6px}
+section{padding:80px 0}
+.section-heading h2{font-size:42px}
+.outline{margin:12px 0 0}
+.chat-window{height:320px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<a href="#home" class="logo">
+BHOLO
+<small>QUOTES</small>
+</a>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<nav id="navigation">
+<a href="#home">HOME</a>
+<a href="#quotes">QUOTES</a>
+<a href="#philosophy">PHILOSOPHY</a>
+<a href="#sessions">SESSIONS</a>
+<a href="#assistant">BHOLO AI</a>
+<a href="#contact" class="nav-btn">CONNECT ↗</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+<div class="hero-content">
+
+<div class="hero-label">WELCOME TO THE BHOLosphere</div>
+
+<h1>
+BHOLO
+<span>THE STANDARD</span>
+</h1>
+
+<div class="divider"></div>
+
+<p class="hero-description">
+An exclusive space for ambition, self-development,
+discipline and extraordinary thinking.
+Where mindset meets purpose and vision becomes action.
+</p>
+
+<a href="#quotes" class="button">EXPLORE THE BHOLosphere ↗</a>
+
+<a href="#philosophy" class="button outline">OUR PHILOSOPHY</a>
+
+<div class="hero-bottom">
+VISION ✦ DISCIPLINE ✦ EXCELLENCE
+</div>
+
+</div>
+</div>
+
+<!-- QUOTES -->
+
+<section id="quotes">
+<div class="container">
+
+<div class="section-heading">
+<small>THE ART OF THINKING DIFFERENTLY</small>
+<h2>Words of <span class="gold">Greatness</span></h2>
+<p>Powerful thoughts. Meaningful perspectives. A different mindset.</p>
+</div>
+
+<div class="quote-area">
+
+<div class="quote-symbol">“</div>
+
+<p id="quote">
+Your future is shaped by the standards you refuse to lower.
+</p>
+
+<div class="quote-author">— BHOLO</div>
+
+<div class="quote-actions">
+<button class="button" onclick="generateQuote()">ANOTHER QUOTE ↻</button>
+<button class="button outline" onclick="copyQuote()">COPY QUOTE</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PHILOSOPHY -->
+
+<section id="philosophy">
+<div class="container">
+
+<div class="section-heading">
+<small>THE BHOLO CODE</small>
+<h2>A Philosophy of <span class="gold">Excellence</span></h2>
+<p>Four principles that define the Bholosphere.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-number">01 / VISION</div>
+<h3>See Beyond</h3>
+<p>Never allow today's circumstances to define tomorrow's possibilities.</p>
+</div>
+
+<div class="card">
+<div class="card-number">02 / DISCIPLINE</div>
+<h3>Stay Consistent</h3>
+<p>Great results are built through small actions repeated with intention.</p>
+</div>
+
+<div class="card">
+<div class="card-number">03 / CONFIDENCE</div>
+<h3>Know Your Worth</h3>
+<p>Respect your journey, believe in your potential and remain willing to learn.</p>
+</div>
+
+<div class="card">
+<div class="card-number">04 / LEGACY</div>
+<h3>Build Something</h3>
+<p>Create value, inspire others and make your journey meaningful.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PRIVATE SESSIONS -->
+
+<section class="sessions" id="sessions">
+<div class="container">
+
+<div class="session-box">
+
+<div class="section-heading">
+<small>EXCLUSIVE PERSONAL ENGAGEMENT</small>
+<h2>Private <span class="gold">Sessions</span></h2>
+</div>
+
+<p>
+Looking for personal motivation, a fresh perspective
+or a meaningful conversation about your ambitions?
+
+Connect with Bholo for private session enquiries.
+</p>
+
+<a class="button"
+href="https://wa.me/263714457777?text=Hello%20Bholo%2C%20I%20am%20interested%20in%20a%20private%20session."
+target="_blank">
+REQUEST A PRIVATE SESSION ↗
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- CHATBOT -->
+
+<section id="assistant">
+<div class="container">
+
+<div class="section-heading">
+<small>THE INTELLIGENCE OF THE BHOLosphere</small>
+<h2>Meet <span class="gold">Bholo Assistant</span></h2>
+<p>Your interactive companion for inspiration and motivational quotes.</p>
+</div>
+
+<div class="chat-container">
+
+<div class="chat-header">
+<div>
+<h3>✦ BHOLO ASSISTANT</h3>
+<div class="status">● ONLINE · QUOTE COMPANION</div>
+</div>
+<div class="gold">B / AI</div>
+</div>
+
+<div class="chat-window" id="chatWindow">
+
+<div class="message bot">
+Welcome to the Bholosphere.
+
+I am your Bholo quote companion.
+
+Ask me about success, money, confidence,
+discipline, purpose or motivation.
+</div>
+
+</div>
+
+<div class="suggestions">
+<button onclick="quickAsk('Give me a success quote')">SUCCESS</button>
+<button onclick="quickAsk('Give me a confidence quote')">CONFIDENCE</button>
+<button onclick="quickAsk('Give me a discipline quote')">DISCIPLINE</button>
+<button onclick="quickAsk('Surprise me with a quote')">SURPRISE ME</button>
+</div>
+
+<div class="chat-input">
+<input id="userInput" placeholder="Ask Bholo anything..."
+onkeydown="if(event.key==='Enter')sendMessage()">
+
+<button onclick="sendMessage()">SEND ↗</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+
+<section id="contact">
+<div class="container">
+
+<div class="social-box">
+
+<div class="section-heading">
+<small>YOUR CONNECTION TO BHOLO</small>
+<h2>Enter the <span class="gold">Inner Circle</span></h2>
+</div>
+
+<p>Follow the journey. Stay inspired. Keep growing.</p>
+
+<a href="https://www.instagram.com/primabs9/"
+target="_blank" class="button">
+INSTAGRAM @PRIMABS9 ↗
+</a>
+
+<br><br>
+
+<a href="https://wa.me/263714457777"
+target="_blank" class="button outline">
+WHATSAPP BHOLO ↗
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">BHOLO.</div>
+
+<p>THINK BEYOND. BECOME MORE.</p>
+
+<p>
+INSTAGRAM: @PRIMABS9<br>
+WHATSAPP: 0714457777
+</p>
+
+<p>© 2026 BHOLO QUOTES. ALL RIGHTS RESERVED.</p>
+
+</footer>
+
+<script>
+
+/* QUOTE GENERATOR */
+
+const quotes=[
+"Your future is shaped by the standards you refuse to lower.",
+"Discipline is choosing your future over temporary comfort.",
+"Never confuse a slow journey with a failed journey.",
+"Confidence grows when you keep promises to yourself.",
+"Success begins when your habits agree with your ambitions.",
+"Build a life you respect, not just an image people admire.",
+"Your mindset can change the direction of your journey.",
+"Let your actions introduce you before your words do.",
+"Greatness requires patience, consistency and courage.",
+"Do not compete with another person's chapter. Build your own story.",
+"Your potential deserves effort, not just imagination.",
+"Protect your vision from unnecessary distractions.",
+"Your standards determine what you are willing to build.",
+"Growth begins when excuses stop making decisions for you.",
+"Be ambitious, remain humble and never stop learning."
+];
+
+let previousQuote=-1;
+
+function generateQuote(){
+
+let number;
+
+do{
+number=Math.floor(Math.random()*quotes.length);
+}while(number===previousQuote);
+
+previousQuote=number;
+
+document.getElementById("quote").textContent=quotes[number];
+
+}
+
+function copyQuote(){
+
+let text=document.getElementById("quote").textContent;
+
+if(navigator.clipboard){
+navigator.clipboard.writeText(text+" — BHOLO")
+.then(()=>alert("Quote copied successfully!"))
+.catch(()=>alert(text));
+}else{
+alert(text);
+}
+
+}
+
+/* CHATBOT */
+
+const responses={
+
+discipline:[
+"Discipline is choosing what matters most over what feels easiest. — BHOLO",
+"Small promises kept daily build powerful self-respect. — BHOLO",
+"Consistency is a quiet form of greatness. — BHOLO"
+],
+
+success:[
+"Success begins when your habits agree with your ambitions. — BHOLO",
+"Build skills, create value and let your work speak. — BHOLO",
+"Think strategically. Act consistently. Grow patiently. — BHOLO"
+],
+
+confidence:[
+"You do not need to be the loudest person in the room to know your worth. — BHOLO",
+"Confidence grows when you keep promises to yourself. — BHOLO",
+"Believe in your potential while remaining willing to improve. — BHOLO"
+],
+
+motivation:[
+"Start where you are. Use what you have. Keep learning. — BHOLO",
+"Your journey deserves patience and consistent effort. — BHOLO",
+"Do not allow one difficult day to define your whole journey. — BHOLO"
+],
+
+purpose:[
+"A clear purpose turns ordinary days into meaningful progress. — BHOLO",
+"Let your values guide your decisions. — BHOLO",
+"Your direction matters more than the speed of your progress. — BHOLO"
+]
+
+};
+
+function randomItem(arr){
+return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function getResponse(question){
+
+let q=question.toLowerCase();
+
+if(q.includes("hello")||q.includes("hi")||q.includes("hey")){
+return "Welcome to the Bholosphere! What would you like to explore today?";
+}
+
+if(q.includes("discipline")){
+return randomItem(responses.discipline);
+}
+
+if(q.includes("success")||q.includes("money")||q.includes("business")){
+return randomItem(responses.success);
+}
+
+if(q.includes("confidence")||q.includes("believe")){
+return randomItem(responses.confidence);
+}
+
+if(q.includes("motivation")||q.includes("inspire")||q.includes("tired")){
+return randomItem(responses.motivation);
+}
+
+if(q.includes("purpose")||q.includes("future")||q.includes("goal")){
+return randomItem(responses.purpose);
+}
+
+if(q.includes("random")||q.includes("surprise")||q.includes("quote")){
+return randomItem(quotes)+" — BHOLO";
+}
+
+if(q.includes("instagram")||q.includes("follow")){
+return "Follow Bholo on Instagram: @primabs9";
+}
+
+if(q.includes("whatsapp")||q.includes("session")||q.includes("contact")){
+return "For private session enquiries, contact Bholo on WhatsApp: +263 714 457 777";
+}
+
+if(q.includes("sad")||q.includes("failure")||q.includes("problem")){
+return "A setback can be a lesson, not a final definition of you. Take time to learn and choose your next constructive step. — BHOLO";
+}
+
+return "I am your Bholo quote companion. Ask me about success, discipline, confidence, purpose or motivation. You can also ask me for a random quote!";
+}
+
+function addMessage(text,type){
+
+let window=document.getElementById("chatWindow");
+
+let message=document.createElement("div");
+
+message.className="message "+type;
+
+message.textContent=text;
+
+window.appendChild(message);
+
+window.scrollTop=window.scrollHeight;
+
+}
+
+function sendMessage(){
+
+let input=document.getElementById("userInput");
+
+let question=input.value.trim();
+
+if(!question)return;
+
+addMessage(question,"user");
+
+input.value="";
+
+setTimeout(function(){
+
+let answer=getResponse(question);
+
+addMessage(answer,"bot");
+
+},400);
+
+}
+
+function quickAsk(question){
+
+document.getElementById("userInput").value=question;
+
+sendMessage();
+
+}
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document.getElementById("navigation").classList.toggle("open");
+
+}
+
+document.querySelectorAll("#navigation a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("navigation").classList.remove("open");
+});
+});
+
+</script>
+
+</body>
+</html>
